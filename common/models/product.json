@@ -1,0 +1,32 @@
+{
+  "name": "Product",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "imageUrl": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "date": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
