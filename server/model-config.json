@@ -33,7 +33,7 @@
     "public": false
   },
   "Product": {
-    "dataSource": "db",
+    "dataSource": "mongodbone",
     "public": true
   }
 }

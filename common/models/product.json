@@ -1,5 +1,13 @@
 {
   "name": "Product",
+  "mongodb": {
+    "collection": "products"
+  },
+  "settings": {
+    "mongodb": {
+      "allowExtendedOperators": true
+    }
+  },
   "base": "PersistedModel",
   "idInjection": true,
   "options": {

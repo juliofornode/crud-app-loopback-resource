@@ -2,5 +2,15 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "mongodbone": {
+    "host": "127.0.0.1",
+    "port": 27017,
+    "url": "mongodb://localhost/loopback001",
+    "database": "loopback001",
+    "password": "",
+    "name": "mongodbone",
+    "user": "",
+    "connector": "mongodb"
   }
 }
