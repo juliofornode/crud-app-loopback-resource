@@ -24,22 +24,22 @@
                 controller: 'ProductCreateController as vm'
             })
             .state('productDetail', {
-                url: '/products/:productId',
+                url: '/products/:id',
                 templateUrl: 'partials/productDetail.html',
                 controller: 'ProductDetailController as vm',
                 resolve: {
-                    productId: function($stateParams) {
-                        return $stateParams.productId;
+                    id: function($stateParams) {
+                        return $stateParams.id;
                     }
                 }
             })
             .state('productEdit', {
-                url: '/products/:productId',
+                url: '/products/:id',
                 templateUrl: 'partials/productEdit.html',
                 controller: 'ProductEditController as vm',
                 resolve: {
-                    productId: function ($stateParams) {
-                        return $stateParams.productId;
+                    id: function($stateParams) {
+                        return $stateParams.id;
                     }
                 }
             });

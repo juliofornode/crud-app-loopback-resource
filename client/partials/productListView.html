@@ -11,7 +11,7 @@
 
     <tr ng-repeat="product in vm.products">
         <td><img ng-if="vm.imageShowed" height="50" width="50" class="img-rounded" ng-src="imgs/{{product.imageUrl}}"</td>
-        <td><a ui-sref="productDetail({productId: product._id})">{{product.title}}</a></td>
+        <td><a ui-sref="productDetail({id: product.id})">{{product.title}} - {{product.id}}</a></td>
         <td>{{product.author}}</td>
         <td>{{product.price | currency}}</td>
         <td>{{product.date | date}}</td>

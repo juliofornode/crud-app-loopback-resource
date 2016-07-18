@@ -5,24 +5,31 @@
     angular.module('myApp')
         .controller('ProductEditController', ProductEditController);
 
-    function ProductEditController(productId, $state, ProductResource) {
+    function ProductEditController(id, $state, Product, $stateParams) {
         var vm = this;
 
 
-        vm.product = ProductResource.get({ productId: productId }, function() {
+        vm.product = Product.get({
+            id: $stateParams.id
         });
 
 
         vm.save = function() {
-            vm.product.$update(function() {
+            vm.product.$save(function() {
                 $state.go('products');
             });
         };
 
+
+/*        vm.remove = Product.deleteById({
+            id: $stateParams.id
+        });*/
+
         vm.remove = function() {
-            vm.product.$delete(function() {
-                $state.go('products');
-            });
+             Product.deleteById({
+                id: $stateParams.id
+             },
+             $state.go('products'));
         };
 
         vm.cancel = function() {

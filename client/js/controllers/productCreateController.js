@@ -5,9 +5,9 @@
     angular.module('myApp')
         .controller('ProductCreateController', ProductCreateController);
 
-    function ProductCreateController($state, ProductResource) {
+    function ProductCreateController($state, Product) {
         var vm = this;
-        vm.product = new ProductResource();
+        vm.product = new Product();
 
         vm.create = function() {
             vm.product.$save(function() {

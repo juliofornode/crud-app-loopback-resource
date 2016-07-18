@@ -1158,8 +1158,13 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
       function(Resource, LoopBackAuth, $injector) {
         var R = Resource(
         urlBase + "/Products/:id",
-          { 'id': '@id' },
+          { id: '@_id' },
           {
+
+            "update": {
+              url: urlBase + "/Products/:id",
+              method: 'PUT' // this method issues a PUT request
+            },
 
             /**
              * @ngdoc method
@@ -1439,10 +1444,10 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * The number of instances updated
              */
-            "updateAll": {
+/*            "updateAll": {
               url: urlBase + "/Products/update",
               method: "POST",
-            },
+            },*/
 
             /**
              * @ngdoc method

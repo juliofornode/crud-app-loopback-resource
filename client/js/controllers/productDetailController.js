@@ -5,13 +5,13 @@
     angular.module('myApp')
         .controller('ProductDetailController', ProductDetailController);
 
-    function ProductDetailController(productId, ProductResource) {
+    function ProductDetailController(id, Product, $stateParams) {
 
         var vm = this;
 
-        vm.product = ProductResource.get({ productId: productId }, function() {
+        vm.product = Product.get({
+            id: $stateParams.id
         }); // get() returns a single entry
-
 
     }
 
